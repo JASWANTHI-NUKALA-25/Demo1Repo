@@ -1,0 +1,348 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+* {
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+	-moz-font-smoothing:antialiased;
+	-o-font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
+}
+
+body {
+	font-family:"Open Sans", Helvetica, Arial, sans-serif;
+	font-weight:300;
+	font-size: 12px;
+	line-height:30px;
+	color:#777;
+	background:#0CF;
+}
+
+.container {
+	max-width:400px;
+	width:100%;
+	margin:0 auto;
+	position:relative;
+}
+
+#contact input[type="text"], #contact input[type="email"],#contact input[type="number"],#contact input[type="price"],#contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
+
+#contact {
+	background:#F9F9F9;
+	padding:25px;
+	margin:50px 0;
+}
+
+#contact h3 {
+	color: rgb(32, 56, 92);
+	display: block;
+	font-size: 25px;
+	font-weight: 400;
+}
+
+#contact h4 {
+	margin:5px 0 15px;
+	display:block;
+	font-size:13px;
+}
+
+
+
+#contact input[type="text"], #contact input[type="email"],#contact input[type="number"],#contact input[type="price"] ,#contact input[type="tel"], #contact input[type="url"], #contact textarea {
+	width:100%;
+	border:1px solid #CCC;
+	background:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+}
+
+#contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="number"],#contact input[type="price"],#contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
+	-webkit-transition:border-color 0.3s ease-in-out;
+	-moz-transition:border-color 0.3s ease-in-out;
+	transition:border-color 0.3s ease-in-out;
+	border:1px solid #AAA;
+}
+
+#contact textarea {
+	height:100px;
+	max-width:100%;
+  resize:none;
+}
+
+#contact button[type="submit"] {
+	cursor:pointer;
+	width:100%;
+	border:none;
+	background:#333;
+	color:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+	font-size:15px;
+}
+
+#contact button[type="submit"]:hover {
+	background:#09C;
+	-webkit-transition:background 0.3s ease-in-out;
+	-moz-transition:background 0.3s ease-in-out;
+	transition:background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+#contact input:focus, #contact textarea:focus {
+	outline:0;
+	border:1px solid #999;
+}
+::-webkit-input-placeholder {
+ color:#888;
+}
+:-moz-placeholder {
+ color:#888;
+}
+::-moz-placeholder {
+ color:#888;
+}
+:-ms-input-placeholder {
+ color:#888;
+}
+
+.navbar {
+	background-color: #333;
+	padding: auto;
+	color: white;
+	padding: 10px;
+	display: flex;
+	
+	align-items: center;
+	height:50px;
+  }
+  .fa-xl {
+	font-size: 2rem; /* Adjust the size as needed */
+  }
+  
+  .fa-user {
+	font-size: 2rem; /* Adjust the size as needed */
+  }
+  
+ 
+  .container {
+	text-align: center;
+  }
+  
+ 
+  .head {
+	font-size: 1.5rem; /* Adjust the size as needed */
+	margin-bottom: 10px;
+  }
+  
+  .admin-name {
+	font-weight: bold;
+	color: #333; /* Change the color as needed */
+  }
+  .navbar1 {
+    background-color: #333;
+    color: white;
+    /* padding: 10px; */
+    display: flex;
+    justify-content: space-between;
+    /* justify-content: space-around; */
+    margin-right: -10px;
+    align-items: center;
+    height: 50px;
+    /* padding:10px;*/ 
+    padding-top: 10px;
+    padding-bottom: 50px; 
+  }
+  
+  /* .navbar img {
+    max-width: 100px;
+    
+  } */
+  
+  /* .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-right: 15px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+  } */
+  .button{
+    
+    text-align: center;
+    text-justify: auto;
+
+  }
+  /* .menu-bar {
+    background-color: #333;
+    color: #fff;
+    padding: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  } */
+   
+  
+ 
+  .logout-button {
+    background-color: transparent;
+    color: black;
+    font-weight: bold;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-color:solid black;
+   
+  }
+   
+  .logout-button:hover {
+    background-color: solidwhite; /* Background color on hover */
+    color:black; /* Text color on hover */
+  }
+  .container{
+    background-color:  #f4f4f4;
+  }
+  .button2{
+    background-color: #333;
+    color: #f4f4f4;
+    text-align: center;
+    width:100px;
+    height:30px;
+    padding: 4px;
+    text-justify: auto;
+    border-radius: 10px;
+    font-size: 15px;
+    margin-left: 125px;
+  }
+  .wallet-button{
+    background-color: transparent;
+    color:white; /* Text color for the button */
+    padding: 1px; /* Adjust padding as needed */
+    width:200px;
+    height:35px;
+    cursor: pointer;
+    
+  }
+  .popup{
+    background-color:lightgray;
+    width:500px;
+    height:200px;
+    margin-left: 400px;
+    text-align: center;
+    font-style: italic;
+    text-justify: auto;
+    font-weight: bold;
+    padding-top: 50px;
+    box-shadow: #333;
+  }
+  .button3 {
+    text-align: center;
+    padding: 5px;
+    font-size: 15px;
+    margin-right:140px;
+    margin-left: 100px;
+    color: white;
+    cursor: pointer;
+    background-color: #333;
+    width:100px;
+    height:40px;
+    border-radius :30px;
+  }
+  .heading1{
+    margin-bottom: 10px;
+    
+  }
+  .paragraph1{
+    margin-bottom: 15px;
+  }
+  
+ .logoutPopup{
+  position: absolute;
+  top: 40px;
+  height: 100px;
+  width: 150px;
+  margin-top: 20px;
+  right:0;
+  background-color: transparent;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1000;
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Put space between items */
+ }
+ .search{
+  width:400px;
+  height:40px;
+  border-radius: 10px;
+  margin-right: 10px;
+ }
+ .headingContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; /* Align items vertically at the center */
+  gap: 8px;
+  
+}
+.userContainer{
+  margin-right: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; /* Align items vertically at the center */
+  gap: 8px;
+}
+.cartContainer{
+  /* width:250px; */
+  margin-right: 30px;
+  gap: 8px;
+  /* margin-left: 400px; */
+  justify-content: center;
+}
+.updateButton{
+  background-color: #333;
+    color: #f4f4f4;
+    text-align: center;
+    width:200px;
+    height:30px;
+    padding: 4px;
+    text-justify: auto;
+    border-radius: 10px;
+    font-size: 15px;
+    margin-left: 125px;
+
+}
+#updateMedicine {
+  display: none;  /* Initially hide the form */
+}
+
+/* Add a class to the form when it should be visible */
+#updateMedicine.visible {
+  display: block;
+}
+.updateMedicine{
+  position: absolute;
+  top: 40px;
+  height: 50px;
+  width: 150px;
+  margin-top: 20px;
+  right:0;
+  background-color: transparent;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1000;
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+}

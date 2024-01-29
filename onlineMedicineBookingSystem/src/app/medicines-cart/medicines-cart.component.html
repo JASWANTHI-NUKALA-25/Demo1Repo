@@ -1,0 +1,53 @@
+<button class="button" *ngIf="showbutton" (click)="navigateToListOfMedicines()">medicines</button>
+<!-- <button class="button" *ngIf="hidebutton" (click)="clearCart()">Clear Cart</button> -->
+<button class="button" *ngIf="hidebutton" (click)="clearCart()" [disabled]="cart.length === 0">Clear Cart</button>
+<div *ngIf="cart.length > 0">
+  <div *ngIf="hhh">
+    <h2 class="paragraph">Your Cart</h2>
+
+    <ul >
+      <li class="list5"  *ngFor="let cartItem of cart">
+        <span class="medicine-name5">{{ cartItem.medicine.medicineName }}</span>
+        <!-- {{ cartItem.medicine.medicineName }} -->
+        <div class="cart-container">
+        <input
+          class="quantity5"
+          *ngIf="showbutton"
+          type="number"
+          [(ngModel)]="cartItem.quantity"
+          placeholder="Quantity"
+        />
+        <i class="fas fa-trash "   style="color: red;"  (click)="removeFromCart(cartItem.medicine.medicineName)"  role="button"></i>
+        <!-- <button class="delete-button" (click)="removeFromCart(cartItem.medicine.medicineName)">Delete</button> -->
+        </div>
+        <span class="individual-price">{{ cartItem.medicine.medicinePrice * cartItem.quantity }} rs</span>
+      </li>
+    </ul>
+    <div class="total-price-container" >
+      <span class="total-price-label" style="text-align: right;">Total Price:</span>
+      <span class="total-price" style="text-align: right;">{{ calculateTotalPrice() }} rs</span>
+    </div>
+    <button class="button" (click)="bookMedicines()" style="text-align: center;" *ngIf="buttonHide">Book</button>
+  </div>
+</div>
+<div *ngIf="showPopup" class="popup">
+  <p>Medicines booked successfully!</p>
+  <!-- <p *ngIf="popupErrorMessage">{{ popupErrorMessage }}</p> -->
+<button class="button3" (click)="closePopup()">close</button>
+</div>
+
+<div *ngIf="showPopup2" class="popup2">
+  <p *ngIf="popupErrorMessage">{{ popupErrorMessage }}</p>
+<button class="button3" (click)="closePopup2()">close</button>
+</div>
+
+<div *ngIf="cart.length === 0 && hide">
+  <p class="paragraph">Your cart is empty.</p>
+</div>
+
+
+
+
+
+
+<router-outlet></router-outlet>

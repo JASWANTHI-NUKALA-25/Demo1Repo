@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Design by foolishdeveloper.com -->
+    <title>Glassmorphism login Form Tutorial in html css</title>
+ 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <style media="screen">
+      *,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:#f4f4f4;
+;
+}
+.background{
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+.background .shape{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+.shape:first-child{
+    background: linear-gradient(
+        #1845ad,
+        #23a2f6
+    );
+    left: -80px;
+    top: -80px;
+}
+.shape:last-child{
+    background: linear-gradient(
+        to right,
+        #ff512f,
+        #f09819
+    );
+    right: -30px;
+    bottom: -80px;
+}
+form{
+    height: 520px;
+    width: 400px;
+    background-color: white;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+}
+form *{
+    font-family: 'Poppins',sans-serif;
+    color: black;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+form h3{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+label{
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: whitesmoke;
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+::placeholder{
+    color: gray;
+}
+.error-message{
+    color: red;
+  }
+.social{
+  margin-top: 30px;
+  display: flex;
+}
+.social div{
+  background: red;
+  width: 150px;
+  border-radius: 3px;
+  padding: 5px 10px 10px 5px;
+  background-color: rgba(255,255,255,0.27);
+  color:black;
+  text-align: center;
+}
+.social div:hover{
+  background-color: rgba(255,255,255,0.47);
+}
+.social .fb{
+  margin-left: 25px;
+}
+.social i{
+  margin-right: 4px;
+}
+
+.overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+      }
+
+      .popup {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        width: 300px;
+        text-align: center;
+      }
+
+      /* Additional styles for popup form */
+      .popup input {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 8px;
+        box-sizing: border-box;
+      }
+
+      .popup button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+bttn{
+  color: #f4f4f4;
+}
+
+    </style>
+</head>
+<div *ngIf="popupp" class="popup2" style="border: solid #333;">
+  <p style="font-style: italic; font-weight: bold;">Login successfull!</p>
+  <!-- <p *ngIf="popupErrorMessage">{{ popupErrorMessage }}</p> -->
+<button class="button3" style="width: 100px; height: 45px; border-radius: 15px; margin: 10px; text-align: center;" (click)="closePopup()">close</button>
+</div>
+<body *ngIf="!isLoggedIn">
+  
+
+  <form>
+    
+      <h5 class="closeIcon" (click)="navigateToAppComponent()" role="button">X</h5>
+
+      <h3>Login Here</h3>
+
+      <label for="userEmail">User Email</label>
+      <input type="text" placeholder="Email" id="userEmail" name="userEmail" [(ngModel)]="userEmail" required
+          autocomplete="userEmail">
+      <div style="color: red;" class="error-message" *ngIf="!userEmail && errorMessage === 'User Email is required.'">
+          {{ errorMessage }}
+      </div>
+
+      <label for="password">Password</label>
+      <!-- <input type="password" placeholder="Password" id="password" name="password" [(ngModel)]="password" required> -->
+      <div class="password-input-wrapper">
+        <input type="{{ passwordVisible ? 'text' : 'password' }}" placeholder="Password" id="userPassword" name="userPassword" [(ngModel)]="password" required>
+        <i  class="password-toggle-icon" (click)="togglePasswordVisibility()">{{ passwordVisible ? '👁️' : '👁️‍🗨️' }}</i>
+      </div>
+      <div style="color: red;" class="error-message"
+          *ngIf="!password && errorMessage === 'Password is required.'">
+          {{ errorMessage }}
+      </div>
+      
+      <br>
+
+      <button style="color: #f4f4f4" type="button" (click)="login()">Login</button>
+      <a  (click)="showForgotPasswordPopup1()" role="button">Forgot Password</a>
+      <div style="color: red;" *ngIf="errorMessage && errorMessage !== 'User Email is required.' && errorMessage !== 'Password is required.'"
+          class="error-message">
+          {{ errorMessage }}
+      </div>
+  </form>
+  
+  <div class="popup-wrapper" *ngIf="showForgotPasswordPopup">
+      <div class="popup">
+          <h3>Forgot Password</h3>
+          <form>
+            <h4 style="text-align: right; color: #333;" (click)="closePopup()" role="button">x</h4>
+              <label for="popupUserEmail">User Email</label>
+              <input type="text" id="popupUserEmail" name="popupUserEmail" [(ngModel)]="popupUserEmail" required>
+
+              <label for="popupNewPassword">New Password</label>
+              <!-- <input type="password" id="popupNewPassword" name="popupNewPassword" [(ngModel)]="popupNewPassword" required> -->
+              <div class="password-input-wrapper">
+                <input type="{{ passwordVisible ? 'text' : 'password' }}" id="popupNewPassword" name="popupNewPassword" [(ngModel)]="popupNewPassword" required>
+                <i  class="password-toggle-icon" (click)="togglePasswordVisibility()">{{ passwordVisible ? '👁️' : '👁️‍🗨️' }}</i>
+              </div>
+              <label for="popupConfirmPassword">Confirm Password</label>
+              <!-- <input type="password" id="popupConfirmPassword" name="popupConfirmPassword" [(ngModel)]="popupConfirmPassword" required> -->
+              <div class="password-input-wrapper">
+                <input type="{{ passwordVisible ? 'text' : 'password' }}" id="popupConfirmPassword" name="popupConfirmPassword" [(ngModel)]="popupConfirmPassword" required>
+                <i  class="password-toggle-icon" (click)="togglePasswordVisibility()">{{ passwordVisible ? '👁️' : '👁️‍🗨️' }}</i>
+              </div>
+                  <div *ngIf="popupErrorMessage" class="error-message" style="color: red;">
+                    {{ popupErrorMessage }}
+                </div>
+              <button type="button" style="background-color: #333;" (click)="saveNewPassword()">Save</button>
+          </form>
+      </div>
+  </div>
+</body>
+</html>
+
+
+

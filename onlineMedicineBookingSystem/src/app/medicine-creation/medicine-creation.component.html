@@ -1,0 +1,43 @@
+<nav class="navbar1">
+  <div class="headingContainer mt-5">
+    <i class="fa-solid fa-truck-medical fa-xl"></i>
+    <h5 class="heading1 mt-2">Online Medicine Booking System</h5>
+   
+  </div>
+
+  <div class="userContainer mt-5">
+    <i class="fa-solid fa-plus" style="padding-right: 30px;" role="button" (click)="addMedicine()">Add Medicine</i>
+    <i class="fa-regular fa-user fa-xl" (click)="jj()" role="button"></i>
+  </div>
+</nav>
+
+<div class="logoutPopup" *ngIf="showUserCard">
+  <i class="fa-solid fa-arrow-right-from-bracket" style="color: #778192;"></i>
+  <button class="logout-button" (click)="logout()">Logout</button>
+</div>
+
+<div>
+  <h2 style="text-align: center;">Medicine List</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Medicine Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let medicine of medicines">
+        <td>{{ medicine.medicineName }}</td>
+        <td>{{ medicine.medicineQuantity }}</td>
+        <td>{{ medicine.medicinePrice }}</td>
+        <td>
+          
+          <i class="fa-regular fa-pen-to-square" role="button" (click)="updateMedicine(medicine.medicineId)" style="padding-right: 30px;" ></i>
+          <i class="fa-solid fa-trash" role="button" (click)="deleteMedicine(medicine)" ></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

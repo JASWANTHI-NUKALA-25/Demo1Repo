@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two-Column Layout</title>
+</head>
+<body>
+
+  <div *ngIf="isAppVisible">
+  <nav class="navbar">
+    <i class="fa-solid fa-truck-medical fa-xl"></i>
+    <h5 class="heading">Online Medicine Booking System</h5>
+  </nav>
+</div>
+  <div *ngIf="isAppVisible" class="container">
+    
+    <div class="column">
+      <img src="https://img.freepik.com/premium-vector/express-delivery-icon-concept_7188-412.jpg?w=740" alt="Delivery Image">
+    </div>
+    <div class="column">
+      <p class="paragraph">Get The Fastest Delivery Medicine For You</p>
+      <div class="buttons-container">
+        <button class="button"(click)="hideAppAndNavigate()">SignUp</button>
+  <button  class="button" (click)="hideAppAndNavigateLogin()">Login</button>
+  <p style="text-align: left; font-size: 15px;">Already Have Account ? Login!</p>
+  <p style="text-align: left; font-size: 15px;">Don't Have Account ? SignUp!</p>
+      </div>
+    </div>
+  </div>
+ 
+</body>
+</html>
+
+
+
+
+
+

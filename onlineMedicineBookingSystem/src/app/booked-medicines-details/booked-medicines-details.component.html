@@ -1,0 +1,20 @@
+<!-- booked-medicines-details.component.html -->
+
+<ul *ngFor="let booking of bookingDetails" class="booking-list">
+  <li>
+    <h3>User: {{ booking.userName }}</h3>
+    <p>Total Price: {{ booking.totalPrice }}</p>
+    <p>Booking Date: {{ booking.bookingDate }}</p>
+    <p>Booking Id: {{ booking.bookingId }}</p>
+
+    <ul class="medicine-list">
+      <li *ngFor="let medicine of booking.bookedMedicines">
+        <p>Medicine Name: {{ medicine.medicineName }}</p>
+        <p>Quantity: {{ medicine.medicineQuantity }}</p>
+        <!-- <button (click)="cancelBooking(booking.bookingId, medicine.medicineId)">Cancel Booking</button> -->
+      </li>
+    </ul>
+    <!-- Cancel Booking button -->
+    <!-- <button (click)="cancelBooking(booking.bookingId)">Cancel Booking</button> -->
+  </li>
+</ul>

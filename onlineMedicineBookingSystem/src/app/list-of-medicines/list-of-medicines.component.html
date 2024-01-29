@@ -1,0 +1,65 @@
+<!-- Navbar -->
+<nav class="navbar1 ">
+  <div class="headingContainer mt-5">
+  <i class="fa-solid fa-truck-medical fa-xl "></i>
+  <h5 class="heading1 mt-2 ">Online Medicine Booking System</h5>
+</div>
+
+<div class="searchContainer mt-5">
+  
+  <input type="text" [(ngModel)]="searchTerm" placeholder="Search by Medicine Name" class="search"  (input)="searchMedicines()">
+
+</div>
+
+  <div class="cartContainer mt-5">
+   
+  <i class="fa-solid fa-cart-plus fa-xl cart " (click)="gotoCart()" role="button"></i>
+</div>
+  <div class="userContainer mt-5 " >
+  <i class="fa-regular fa-user fa-xl" (click)="jj()" role="button"></i>
+  <p class="paragraph1 mt-2">{{userName}}</p>
+  </div>
+</nav>
+<div class="logoutPopup2" *ngIf="showUserCard">
+  <i class="fa-solid fa-user " style="color: #778192"></i>
+  <button class="update-button" (click)="updateUser()" role="button">Update Profile</button>
+</div>
+
+<div class="logoutPopup3" *ngIf="showUserCard">
+  <i class="fa-solid fa-list" style="color: #778192"></i>
+  <button class="update-button" (click)="orders()" role="button">My Orders</button>
+</div>
+
+<div class="logoutPopup" *ngIf="showUserCard">
+  <i class="fa-solid fa-arrow-right-from-bracket" style="color: #778192;"></i>
+  <button class="logout-button" (click)="logout()">Logout</button>
+</div>
+
+
+
+
+<div *ngIf="popupp" class="popup5" style="border: solid #333;">
+ <h5 class="crossIcon" role="button" (click)="closePopup()">X</h5>
+  <p style="font-style: italic; font-weight: bold;">Medicine Added to Cart!</p>
+  <!-- <p *ngIf="popupErrorMessage">{{ popupErrorMessage }}</p> -->
+<!-- <button class="button3" style="width: 100px; height: 45px; border-radius: 15px; margin: 10px; text-align: center;" (click)="closePopup()">close</button> -->
+</div>
+  <div class="container mt-3">
+    <div class="row">
+      <div *ngFor="let medicine of filteredMedicines" class="col-md-3" >
+        <div class="card">
+          <div class="card-body">
+            <p class="card-title"><strong>Name:</strong>{{ medicine.medicineName }}</p>
+            <p class="card-text"><strong>Description:</strong>{{ medicine.medicineDescription }}</p>
+            <p class="card-text"><strong>Quantity:</strong> {{medicine.medicineQuantity}}</p>
+            <p class="card-price"><strong>Price:</strong> {{medicine.medicinePrice}} rs</p>
+            <button class="button2" (click)="selectMedicine(medicine)" [disabled]="medicine.medicineQuantity === 0">
+              {{ medicine.medicineQuantity === 0 ? 'Out of Stock' : 'Add to Cart' }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+

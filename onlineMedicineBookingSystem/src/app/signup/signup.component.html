@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Design by foolishdeveloper.com -->
+    <title>Glassmorphism login Form Tutorial in html css</title>
+ 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <style media="screen">
+      *,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:  #f4f4f4;
+}
+.background{
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+.background .shape{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+.shape:first-child{
+    background: linear-gradient(
+        #1845ad,
+        #23a2f6
+    );
+    left: -80px;
+    top: -80px;
+}
+.shape:last-child{
+    background: linear-gradient(
+        to right,
+        #ff512f,
+        #f09819
+    );
+    right: -30px;
+    bottom: -80px;
+}
+form{
+    height: 670px;
+    width: 400px;
+    background-color: white;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+    margin-top: 50px;
+}
+form *{
+    font-family: 'Poppins',sans-serif;
+    color:black;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+form h3{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+label{
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color:whitesmoke;
+    border-color: black;
+    border-radius: 3px;
+    border-style: solid;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+::placeholder{
+    color: black;
+}
+.error-message{
+    color: red;
+  }
+.social{
+  margin-top: 30px;
+  display: flex;
+}
+.social div{
+  background: red;
+  width: 150px;
+  border-radius: 3px;
+  padding: 5px 10px 10px 5px;
+  background-color: rgba(255,255,255,0.27);
+  color:black;
+  text-align: center;
+}
+.form-container.blurred {
+            filter: blur(5px); /* Adjust the blur amount as needed */
+        }
+.social div:hover{
+  background-color: rgba(255,255,255,0.47);
+}
+.social .fb{
+  margin-left: 25px;
+}
+.social i{
+  margin-right: 4px;
+}
+.form-container {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+            padding: 50px 35px;
+            margin-top: 50px;
+            filter: none; /* Remove filter */
+        }
+.overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Adjust the transparency as needed */
+            z-index: 1000; /* Make sure the overlay is on top of other elements */
+            display: none; /* Initially hide the overlay */
+        }
+
+        .popup2 {
+            /* Your existing styles for the popup */
+            position: absolute;
+            z-index: 1001; /* Ensure the popup is on top of the overlay */
+        }
+    </style>
+</head>
+<body >
+    <nav *ngIf="!popupp" class="navbar">
+        <h5>Online Medicine Booking System</h5>
+      </nav>
+      <div class="overlay" *ngIf="popupp" (click)="closePopup()"></div>
+      <div *ngIf="popupp" class="popup2" style="border: solid #333;">
+          <p style="font-style: italic; font-weight: bold;">Registered successfully!</p>
+          <button class="button3" style="width: 100px; height: 45px; border-radius: 15px; margin: 10px; text-align: center;" (click)="closePopup()">close</button>
+      </div>
+      <form  *ngIf="!popupp"  class="form-container" [ngClass]="{ 'disabled': popupp }">
+        <h5 class="closeIcon" (click)="navigateToAppComponent()" role="button">X</h5>
+        <h3>SignUp! Here</h3>
+        
+            <label for="userName">Name</label>
+            <input type="text" id="userName" name="userName" [(ngModel)]="userName" required autocomplete="username">
+            <div style="color: red; font-size: 15px;"  class="error-message" *ngIf="!userName && errorMessage === 'Username is required.'">
+                {{ errorMessage }}
+              </div>
+             
+        
+        
+        
+            <label for="userEmail">Email</label>
+            <input type="email" id="userEmail" name="userEmail" [(ngModel)]="userEmail" required autocomplete="email">
+            <div style="color: red; font-size: 15px;"  class="error-message" *ngIf="!userEmail && errorMessage === 'Email is required.'">
+                {{ errorMessage }}
+              </div>
+              
+       
+        
+            <label for="userMobileNumber">Mobile Number</label>
+            <input type="number" id="userMobileNumber" name="userMobileNumber" [(ngModel)]="userMobileNumber" required>
+            <div style="color: red; font-size: 15px;"  class="error-message" *ngIf="!userMobileNumber && errorMessage === 'Mobile Number is required.'">
+                {{ errorMessage }}
+              </div>
+            
+        
+        
+            <label for="userPassword">Password</label>
+            <!-- <input type="password" id="userPassword" name="userPassword" [(ngModel)]="userPassword" required> -->
+            <div class="password-input-wrapper">
+              <input type="{{ passwordVisible ? 'text' : 'password' }}" id="userPassword" name="userPassword" [(ngModel)]="userPassword" required>
+              <i  class="password-toggle-icon" (click)="togglePasswordVisibility()">{{ passwordVisible ? '👁️' : '👁️‍🗨️' }}</i>
+            </div>
+            <div style="color: red; font-size: 15px;"  class="error-message" *ngIf="!userPassword && errorMessage === 'Password is required.'">
+                {{ errorMessage }}
+              </div>
+            
+            
+            <br>
+        
+        <button style="color: #f4f4f4" type="submit" (click)="onSignup()">Register</button>
+
+        <div style="color: red; font-size: 15px;" *ngIf="errorMessage && errorMessage !== 'Username is required.' && errorMessage !== 'Password is required.' && errorMessage !== 'Mobile Number is required.' && errorMessage!=='Email is required.'" class="error-message">
+          {{ errorMessage }}
+        </div>
+        
+    </form>
+</body>
+</html>

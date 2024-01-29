@@ -1,0 +1,284 @@
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+.card {
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  
+  .card-title {
+    font-size: 1rem;
+    
+  }
+  
+  .card-text {
+    font-size: 1rem;
+  }
+  .card-price{
+    font-size: 1rem;
+    text-align: right;
+  }
+  .card-footer {
+    background-color: #f8f9fa;
+    padding: 10px;
+  }
+  
+  .row {
+    margin: 0 -15px;
+  }
+  
+  .col-md-3 {
+    padding: 0 15px;
+  }
+  .nav1{
+    background-color: rgb(113, 0, 128);
+  }
+  .navbar1 {
+    background-color: #333;
+    color: white;
+    /* padding: 10px; */
+    display: flex;
+    justify-content: space-between;
+    /* justify-content: space-around; */
+    margin-right: -10px;
+    align-items: center;
+    height: 50px;
+    /* padding:10px;*/ 
+    padding-top: 10px;
+    padding-bottom: 50px; 
+  }
+  
+  /* .navbar img {
+    max-width: 100px;
+    
+  } */
+  
+  /* .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-right: 15px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+  } */
+  .button{
+    
+    text-align: center;
+    text-justify: auto;
+
+  }
+  /* .menu-bar {
+    background-color: #333;
+    color: #fff;
+    padding: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  } */
+   
+  
+ 
+  .logout-button {
+    background-color: transparent;
+    color: black;
+    font-weight: bold;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-color:solid black;
+   
+  }
+   
+  .logout-button:hover {
+    background-color: solidwhite; /* Background color on hover */
+    color:black; /* Text color on hover */
+  }
+  .container{
+    background-color:  #f4f4f4;
+  }
+  .button2{
+    background-color: #333;
+    color: #f4f4f4;
+    text-align: center;
+    width:100px;
+    height:30px;
+    padding: 4px;
+    text-justify: auto;
+    border-radius: 10px;
+    font-size: 15px;
+    margin-left: 125px;
+  }
+  .wallet-button{
+    background-color: transparent;
+    color:white; /* Text color for the button */
+    padding: 1px; /* Adjust padding as needed */
+    width:200px;
+    height:35px;
+    cursor: pointer;
+    
+  }
+  .popup{
+    background-color:lightgray;
+    width:500px;
+    height:200px;
+    margin-left: 400px;
+    text-align: center;
+    font-style: italic;
+    text-justify: auto;
+    font-weight: bold;
+    padding-top: 50px;
+    box-shadow: #333;
+  }
+  .button3 {
+    text-align: center;
+    padding: 5px;
+    font-size: 15px;
+    margin-right:140px;
+    margin-left: 100px;
+    color: white;
+    cursor: pointer;
+    background-color: #333;
+    width:100px;
+    height:40px;
+    border-radius :30px;
+  }
+  .heading1{
+    margin-bottom: 10px;
+    
+  }
+  .paragraph1{
+    margin-bottom: 15px;
+  }
+  
+ .logoutPopup{
+  position: absolute;
+  top: 40px;
+  height: 50px;
+  width: 150px;
+  margin-top: 140px;
+  right:0;
+  background-color: transparent;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1000;
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Put space between items */
+ }
+ .search{
+  width:400px;
+  height:40px;
+  border-radius: 10px;
+  margin-right: 10px;
+ }
+ .headingContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; /* Align items vertically at the center */
+  gap: 8px;
+  
+}
+.userContainer{
+  margin-right: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; /* Align items vertically at the center */
+  gap: 8px;
+}
+.cartContainer{
+  /* width:250px; */
+  margin-right: 30px;
+  gap: 8px;
+  /* margin-left: 400px; */
+  justify-content: center;
+}
+input{
+  border-color:#333;
+}
+.button2:disabled {
+  background-color: #dddddd; /* Disabled background color */
+  color: #999999; /* Disabled text color */
+  cursor: not-allowed; /* Change cursor to indicate not clickable */
+}
+.update-button{
+  background-color: transparent;
+    color: black;
+    font-weight: bold;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-color:solid black;
+}
+.logoutPopup2{
+  position: absolute;
+  top: 40px;
+  height: 50px;
+  width: 150px;
+  margin-top: 20px;
+  right:0;
+  background-color: transparent;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1000;
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  size: 15px;
+}
+.popup5 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: solid #333;
+  padding: 20px;
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+.popup5 p {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.popup5 button {
+  width: 100px;
+  height: 45px;
+  border-radius: 15px;
+  margin: 10px;
+  text-align: center;
+}
+.crossIcon{
+  text-align: right;
+  font-weight: bold;
+
+}
+.logoutPopup3{
+  position: absolute;
+  top: 40px;
+  height: 50px;
+  width: 150px;
+  margin-top: 80px;
+  right:0;
+  background-color: transparent;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1000;
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  size: 15px;
+}

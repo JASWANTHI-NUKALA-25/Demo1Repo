@@ -1,0 +1,63 @@
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  .popup{
+    background-color:lightgray;
+    width:500px;
+    height:200px;
+    margin-left: 400px;
+    text-align: center;
+    font-style: italic;
+    text-justify: auto;
+    font-weight: bold;
+    padding-top: 50px;
+    box-shadow: #333;
+  }
+  .popup2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Set a higher z-index to make it appear above the form */
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+  }
+  .crossIcon{
+    text-align: right;
+    font-weight: bold;
+  
+  }

@@ -1,0 +1,184 @@
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+.menu-bar {
+    background-color: #333;
+    color: #fff;
+    padding: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .button {
+    text-align: center;
+    padding: 5px;
+    font-size: 15px;
+    margin-right:120px;
+    margin-left: 50px;
+    color: white;
+    cursor: pointer;
+    background-color: #333;
+    width:100px;
+    height:40px;
+    border-radius :30px;
+  }
+  .paragraph{
+    text-align: center;
+    font-weight: bold;
+    font-size: x-large;
+  }
+  .list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px; /* Adjust the margin as needed */
+  }
+  
+  .quantity {
+    width: 100px; /* Adjust the width as needed */
+  }
+
+  .popup{
+    background-color:lightgray;
+    width:500px;
+    height:200px;
+    margin-left: 400px;
+    text-align: center;
+    font-style: italic;
+    text-justify: auto;
+    font-weight: bold;
+    padding-top: 50px;
+    box-shadow: #333;
+  }
+  .button3 {
+    text-align: center;
+    padding: 5px;
+    font-size: 15px;
+    margin-right:140px;
+    margin-left: 100px;
+    color: white;
+    cursor: pointer;
+    background-color: #333;
+    width:100px;
+    height:40px;
+    border-radius :30px;
+  }
+  .list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Style for the quantity input */
+  .quantity {
+    width: 60px;
+    margin-right:100px;
+    padding: 5px;
+  }
+  
+  /* Style for the trash can icon */
+  .fa-trash-can {
+    cursor: pointer;
+    color: #ff0000; /* Adjust the color as needed */
+  }
+  
+  .popup2{
+    background-color:lightgray;
+    width:500px;
+    height:200px;
+    margin-left: 400px;
+    text-align: center;
+    font-style: italic;
+    text-justify: auto;
+    font-weight: bold;
+    padding-top: 50px;
+    box-shadow: #333;
+  }
+  /* Cart item styling */
+  .cart-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .list5 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the items horizontally */
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .medicine-name5 {
+    flex-grow: 1; /* Allow the medicine name to take remaining space */
+    margin-right: 20px; /* Adjust the margin as needed */
+  }
+  .quantity5 {
+    width: 50px;
+  margin-right: 20px;  /* Adjust this value as needed */
+
+  }
+  
+  .fa-trash5 {
+    cursor: pointer;
+    margin-right: 20px; /* Adjust the margin as needed */
+  }
+
+/* Delete icon styling */
+.fa-trash-can5 {
+  cursor: pointer;
+  color: #ff4500;
+  font-size: 18px;
+}
+.button:disabled {
+  background-color: #dddddd; /* Disabled background color */
+  color: #999999; /* Disabled text color */
+  cursor: not-allowed; /* Change cursor to indicate not clickable */
+}
+.cart-container{
+  margin-right: 70px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.cart-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+
+/* Style for individual prices */
+.individual-price {
+  font-size: 14px;
+  color: #333;
+  margin-left: 20px; /* Adjust the margin as needed */
+}
+
+/* Style for total price container */
+.total-price-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.total-price-label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.total-price {
+  font-size: 18px;
+  color: #28a745; /* Green color for emphasis */
+}
+
+/* Style for the "Book" button */
